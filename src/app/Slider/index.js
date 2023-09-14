@@ -49,7 +49,7 @@ export default function Slider({ sliderOpen, setSliderOpen }) {
                     <div className="absolute right-0 top-0 flex">
                       <button
                         type="button"
-                        className="relative place-content-center rounded-md text-black hover:text-red-900 hover:bg-red-100"
+                        className="relative place-content-center rounded-md text-black hover:text-red-900 hover:bg-red-100 outline-none focus:outline-none"
                         onClick={() => setSliderOpen(false)}
                       >
                         <span className="absolute -inset-2.5" />
