@@ -2,17 +2,21 @@
 import Image from "next/image";
 export default function About() {
   return (
-    <div className="w-fit pt-5 pb-5 pl-20 pr-10 ml-5  border-2 border-red-600">
-      <div className="grid grid-rows-3 grid-flow-col gap-4 w-fit h-fit">
-        <div className="row-span-3">
-          <Image
-            src="/images/m1.jpg"
-            alt="Marcia Moss"
-            className="dark:invert"
-            width={150}
-            height={24}
-            priority
-          />
+    <div className="w-full h-full p-7">
+      <div className="flex mobile:flex-col tablet:flex-row laptop:flex-row desktop:flex-row place-content-center">
+        <div className="mobile:self-center tablet:self-start laptop:self-start desktop:self-start tablet:mr-4 laptop:mr-8 desktop:mr-8 my-4">
+          <div className="flex flex-col place-content-center bg-black">
+            <div className="self-center">
+              <Image
+                src="/images/m1.jpg"
+                alt="Marcia Moss"
+                className="dark:invert"
+                width={150}
+                height={24}
+                priority
+              />
+            </div>
+          </div>
           <div className="flex flex-col bg-white place-content-center">
             <div className="self-center text-sm text-customFontColor font-bold mt-1 mb-1">
               <a href="https://github.com/marciamoss" target="blank">
@@ -37,37 +41,33 @@ export default function About() {
             </div>
           </div>
         </div>
-        <div className="ml-8 h-fit flex flex-row place-content-center col-span-2">
-          <div>
-            <div className="self-center p-4 block border-l-4 border-blockQuoteBorder">
-              <p className="text-left text-customFontColor italic font-bold">
-                Maya Angelou perfectly sums up the way I work in her quote,
-              </p>
-              <p className="text-left text-customFontColor italic font-bold">
-                &quot;Do the best you can until you know better. Then when you
-                know better, do better.&quot;
-              </p>
-            </div>
-            <div className="flow-root text-base font-sans font-normal leading-6 text-customFontColor my-4">
-              I’m a full stack developer who is always striving for excellence
-              and growth. I specialize in JavaScript technologies across the
-              MERN & MEAN stack (Mongo DB, Express.js, React.js, Angular and
-              Node.js). With experience in crafting clean front-ends and
-              functional back-end API systems, I love to spend my time coding
-              and, due to my work ethic and focus, am known to deliver on time.
-            </div>
-            <div className="flow-root text-base font-sans font-normal leading-6 text-customFontColor my-4">
-              As a lifelong learner that is always looking to stay on top of
-              leading technologies, I graduated from University of North
-              Carolina’s MERN Development Boot Camp and Farleigh Dickinson
-              University with a Master in Computer Science. As a result, I am
-              savvy enough to build your next application from scratch, yet
-              sophisticated enough to have developed Fortune 100 solutions.
-            </div>
+        <div className="mobile:self-center tablet:w-3/4 tablet:self-start laptop:self-start desktop:self-start my-4">
+          <div className="p-4 block border-l-4 border-blockQuoteBorder">
+            <p className="text-left text-customFontColor italic font-bold">
+              Maya Angelou perfectly sums up the way I work in her quote,
+            </p>
+            <p className="text-left text-customFontColor italic font-bold">
+              &quot;Do the best you can until you know better. Then when you
+              know better, do better.&quot;
+            </p>
           </div>
-        </div>
-        <div className="ml-8 h-fit row-span-2 col-span-2">
-          <div className="flow-root text-base font-sans font-bold leading-6 text-customFontColor">
+          <div className="flow-root text-base font-sans font-normal leading-6 text-customFontColor my-4">
+            I’m a full stack developer who is always striving for excellence and
+            growth. I specialize in JavaScript technologies across the MERN &
+            MEAN stack (Mongo DB, Express.js, React.js, Angular and Node.js).
+            With experience in crafting clean front-ends and functional back-end
+            API systems, I love to spend my time coding and, due to my work
+            ethic and focus, am known to deliver on time.
+          </div>
+          <div className="flow-root text-base font-sans font-normal leading-6 text-customFontColor my-4">
+            As a lifelong learner that is always looking to stay on top of
+            leading technologies, I graduated from University of North
+            Carolina’s MERN Development Boot Camp and Farleigh Dickinson
+            University with a Master in Computer Science. As a result, I am
+            savvy enough to build your next application from scratch, yet
+            sophisticated enough to have developed Fortune 100 solutions.
+          </div>
+          <div className="flow-root text-base font-sans font-bold leading-6 text-customFontColor my-4">
             Education:
             <ul className="list-disc mx-12 font-normal">
               <li>
@@ -80,7 +80,7 @@ export default function About() {
               </li>
             </ul>
           </div>
-          <div className="flow-root text-base font-sans font-bold leading-6 text-customFontColor my-8">
+          <div className="flow-root text-base font-sans font-bold leading-6 text-customFontColor my-4">
             Skills:
             <ul className="list-disc mx-12 font-normal">
               <li>

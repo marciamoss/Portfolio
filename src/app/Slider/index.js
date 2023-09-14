@@ -26,7 +26,7 @@ export default function Slider({ sliderOpen, setSliderOpen }) {
 
         <div className="fixed inset-0 overflow-hidden">
           <div className="absolute inset-0 overflow-hidden">
-            <div className="pointer-events-none fixed inset-y-16 left-0 bottom-0 flex w-64">
+            <div className="pointer-events-none fixed inset-y-16 left-0 bottom-0 flex mobile:w-24 tablet:w-24 laptop:w-64">
               <Transition.Child
                 as={Fragment}
                 enter="transform transition ease-in-out duration-500 sm:duration-700"
