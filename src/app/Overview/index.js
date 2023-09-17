@@ -52,35 +52,95 @@ const Overview = ({ showOverview, setShowOverview, details }) => {
                   <b>Tech Used:</b>{" "}
                   <p className="ml-1">{details.technologies}</p>
                 </div>
-                <div className="mt-5 flex flex-row place-content-evenly">
-                  <button
-                    className="text-customFontColor font-bold hover:text-red-600"
-                    onClick={() => setShowOverview(false)}
-                  >
-                    Close
-                  </button>
-                  <button className="text-customFontColor font-bold hover:text-sky-600">
-                    {details?.applink && (
+                <div className="flex flex-col place-content-evenly">
+                  <div className="mt-5 flex flex-row place-content-evenly">
+                    <button
+                      className="text-customFontColor font-bold hover:text-red-600"
+                      onClick={() => setShowOverview(false)}
+                    >
+                      Close
+                    </button>
+                    <button className="text-customFontColor font-bold hover:text-sky-600">
+                      {details?.applink && (
+                        <Link
+                          href={details.applink}
+                          passHref={true}
+                          target="_blank"
+                          prefetch={true}
+                        >
+                          Launch App
+                        </Link>
+                      )}
+                    </button>
+                    {details.title === "Explore Jobs Mobile App" && (
+                      <div className="text-customFontColor font-bold ">
+                        <p className="ml-2 mr-2">Launch App</p>
+                        <div className="flex flex-row">
+                          <button className="text-customFontColor font-bold hover:text-sky-600">
+                            <Link
+                              href={details.iOS}
+                              passHref={true}
+                              target="_blank"
+                              prefetch={true}
+                            >
+                              iOS
+                            </Link>
+                          </button>
+                          <button className="text-customFontColor font-bold hover:text-sky-600 ml-2">
+                            <Link
+                              href={details.Android}
+                              passHref={true}
+                              target="_blank"
+                              prefetch={true}
+                            >
+                              Android
+                            </Link>
+                          </button>
+                        </div>
+                      </div>
+                    )}
+                    <button className="text-customFontColor font-bold hover:text-sky-600">
                       <Link
-                        href={details.applink}
+                        href={details.githublink}
                         passHref={true}
                         target="_blank"
                         prefetch={true}
                       >
-                        Launch App
+                        Explore Code
                       </Link>
-                    )}
-                  </button>
-                  <button className="text-customFontColor font-bold hover:text-sky-600">
-                    <Link
-                      href={details.githublink}
-                      passHref={true}
-                      target="_blank"
-                      prefetch={true}
-                    >
-                      Explore Code
-                    </Link>
-                  </button>
+                    </button>
+                  </div>
+                  {details.title === "Explore Jobs Mobile App" && (
+                    <div className="ont-semibold text-red-600 flex flex-col place-content-center mt-3">
+                      <p className="ml-1">
+                        Note: App is not yet made available in apple and goole
+                        play stores, to launch the app on your phone ExpoGo
+                        needs to be installed on your phone
+                      </p>
+                      <div className="flex flex-row place-content-evenly">
+                        <button className="text-customFontColor font-bold hover:text-sky-600">
+                          <Link
+                            href="https://apps.apple.com/us/app/expo-go/id982107779"
+                            passHref={true}
+                            target="_blank"
+                            prefetch={true}
+                          >
+                            Expogo iOS
+                          </Link>
+                        </button>
+                        <button className="text-customFontColor font-bold hover:text-sky-600">
+                          <Link
+                            href="https://play.google.com/store/apps/details?id=host.exp.exponent&hl=en_US&gl=US"
+                            passHref={true}
+                            target="_blank"
+                            prefetch={true}
+                          >
+                            Expogo Android
+                          </Link>
+                        </button>
+                      </div>
+                    </div>
+                  )}
                 </div>
               </Dialog.Panel>
             </Transition.Child>
