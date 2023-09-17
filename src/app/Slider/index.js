@@ -26,7 +26,7 @@ export default function Slider({ sliderOpen, setSliderOpen }) {
 
         <div className="fixed inset-0 overflow-hidden">
           <div className="absolute inset-0 overflow-hidden">
-            <div className="pointer-events-none fixed inset-y-16 left-0 bottom-0 flex mobile:w-24 tablet:w-24 laptop:w-64">
+            <div className="pointer-events-none fixed inset-y-16 left-0 bottom-0 flex w-32">
               <Transition.Child
                 as={Fragment}
                 enter="transform transition ease-in-out duration-500 sm:duration-700"
@@ -65,7 +65,7 @@ export default function Slider({ sliderOpen, setSliderOpen }) {
                     <button
                       ref={menuRef}
                       className={`${
-                        pathName === "/" || pathName === "/About"
+                        pathName !== "/Projects"
                           ? "bg-linkActiveColor border-l-4 border-linkBorderColor"
                           : ""
                       } flex flex-row place-content-center px-4 h-16 sm:px-6 hover:bg-gray-500`}

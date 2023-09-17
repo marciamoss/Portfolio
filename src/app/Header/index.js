@@ -1,11 +1,14 @@
 "use client";
-import React, { useRef, useState } from "react";
+import React, { Fragment, useRef, useState } from "react";
 import { ImMenu } from "react-icons/im";
 import Slider from "../Slider";
+import { useRouter, usePathname } from "next/navigation";
+import { Dialog, Transition } from "@headlessui/react";
 
-const Header = () => {
+const Header = ({ sliderOpen, setSliderOpen }) => {
   const headerRef = useRef(null);
-  const [sliderOpen, setSliderOpen] = useState(false);
+  const router = useRouter();
+  const pathName = usePathname();
 
   return (
     <div className="flex justify-between items-center w-full h-16 mx-auto bg-headerColor">
@@ -18,10 +21,20 @@ const Header = () => {
           >
             <ImMenu
               size={35}
-              className="text-white text-lg font-bold max-[640px]:text-sm max-[280px]:text-xs hover:text-blue-900"
+              className="self-center text-white text-lg font-bold max-[640px]:text-sm max-[280px]:text-xs hover:text-blue-900"
             />
           </button>
         </div>
+        <button
+          className="self-center pointer ml-8 text-white text-lg font-bold max-[640px]:text-sm max-[280px]:text-xs hover:underline"
+          onClick={() =>
+            pathName === "/Projects"
+              ? router.push("/About")
+              : router.push("/Projects")
+          }
+        >
+          {pathName === "/Projects" ? "Portfolio" : "Marcia Moss"}
+        </button>
       </div>
       <Slider sliderOpen={sliderOpen} setSliderOpen={setSliderOpen} />
     </div>
