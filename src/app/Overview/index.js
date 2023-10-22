@@ -99,16 +99,18 @@ const Overview = ({ showOverview, setShowOverview, details }) => {
                         </div>
                       </div>
                     )}
-                    <button className="text-customFontColor font-bold hover:text-sky-600">
-                      <Link
-                        href={details.githublink}
-                        passHref={true}
-                        target="_blank"
-                        prefetch={true}
-                      >
-                        Explore Code
-                      </Link>
-                    </button>
+                    {details.githublink && (
+                      <button className="text-customFontColor font-bold hover:text-sky-600">
+                        <Link
+                          href={details.githublink}
+                          passHref={true}
+                          target="_blank"
+                          prefetch={true}
+                        >
+                          Explore Code
+                        </Link>
+                      </button>
+                    )}
                   </div>
                   {details.title === "Explore Jobs Mobile App" && (
                     <div className="ont-semibold text-red-600 flex flex-col place-content-center mt-3">

@@ -205,15 +205,17 @@ export default function Projects() {
                 >
                   Overview
                 </button>
-                <Link
-                  href={p.githublink}
-                  passHref={true}
-                  target="_blank"
-                  prefetch={true}
-                  className="self-center text-center text-customFontColor text-sm font-bold hover:underline"
-                >
-                  Github
-                </Link>
+                {p.githublink && (
+                  <Link
+                    href={p.githublink}
+                    passHref={true}
+                    target="_blank"
+                    prefetch={true}
+                    className="self-center text-center text-customFontColor text-sm font-bold hover:underline"
+                  >
+                    Github
+                  </Link>
+                )}
               </div>
             </div>
           ))}

@@ -1,5 +1,12 @@
 [
   {
+    "image": "/polygon.jpg",
+    "applink": "https://polygon-gamma.vercel.app/",
+    "title": "Creative Math Coaching App",
+    "overview": "The app dynamically generates polygons of different shapes and sizes and equations to be solved",
+    "technologies": "React, Tailwind-css, Animations, Javascript"
+  },
+  {
     "image": "/exploreJobs.png",
     "iOS": "https://github.com/marciamoss/explorejobs/blob/main/assets/ios.jpg",
     "Android": "https://github.com/marciamoss/explorejobs/blob/main/assets/android.jpg",
