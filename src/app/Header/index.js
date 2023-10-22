@@ -28,12 +28,12 @@ const Header = ({ sliderOpen, setSliderOpen }) => {
         <button
           className="self-center pointer ml-8 text-white text-lg font-bold max-[640px]:text-sm max-[280px]:text-xs hover:underline"
           onClick={() =>
-            pathName === "/Projects"
-              ? router.push("/About")
-              : router.push("/Projects")
+            pathName === "/About"
+              ? router.push("/Projects")
+              : router.push("/About")
           }
         >
-          {pathName === "/Projects" ? "Portfolio" : "Marcia Moss"}
+          {pathName === "/About" ? "Marcia Moss" : "Portfolio"}
         </button>
       </div>
       <Slider sliderOpen={sliderOpen} setSliderOpen={setSliderOpen} />

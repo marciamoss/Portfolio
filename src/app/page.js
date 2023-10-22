@@ -1,11 +1,10 @@
 "use client";
-import Link from "next/link";
-import About from "./About/page.js";
+import Projects from "./Projects/page.js";
 
 const Home = () => {
   return (
     <main>
-      <About />
+      <Projects />
     </main>
   );
 };

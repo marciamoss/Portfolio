@@ -65,11 +65,11 @@ export default function Slider({ sliderOpen, setSliderOpen }) {
                     <button
                       ref={menuRef}
                       className={`${
-                        pathName !== "/Projects"
+                        pathName === "/About"
                           ? "bg-linkActiveColor border-l-4 border-linkBorderColor"
                           : ""
                       } flex flex-row place-content-center px-4 h-16 sm:px-6 hover:bg-gray-500`}
-                      onClick={() => router.push("/")}
+                      onClick={() => router.push("/About")}
                     >
                       <p className="self-center w-full text-center text-white font-black text-xl">
                         About
@@ -77,7 +77,7 @@ export default function Slider({ sliderOpen, setSliderOpen }) {
                     </button>
                     <button
                       className={`${
-                        pathName === "/Projects"
+                        pathName !== "/About"
                           ? "bg-linkActiveColor border-l-4 border-linkBorderColor"
                           : ""
                       } flex flex-row place-content-center px-4 h-16 sm:px-6 hover:bg-gray-500`}
