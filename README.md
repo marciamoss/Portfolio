@@ -2,4 +2,4 @@
 
 **App Link** https://portfolio-marciamoss.vercel.app
 
-Portfolio created with Nextjs and Tailwindcss
+Portfolio created with Nextjs and Tailwindcss.
